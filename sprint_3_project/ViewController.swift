@@ -11,16 +11,20 @@ class ViewController: UIViewController {
 
     private var defaultValueCounter: Int = 0
     private var counter: Int = 0
-    @IBOutlet weak var counterLabel: UILabel!
-    @IBOutlet weak var addButton: UIButton!
-    @IBOutlet weak var minusButton: UIButton!
-    @IBOutlet weak var resetButton: UIButton!
-    @IBOutlet weak var historyTextView: UITextView!
+    @IBOutlet private weak var counterLabel: UILabel!
+    @IBOutlet private weak var addButton: UIButton!
+    @IBOutlet private weak var minusButton: UIButton!
+    @IBOutlet private weak var resetButton: UIButton!
+    @IBOutlet private weak var historyTextView: UITextView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setDefault()
+        minusButton.layer.cornerRadius = 6
+        resetButton.layer.cornerRadius = 6
+        addButton.layer.cornerRadius = 6
+        historyTextView.layer.cornerRadius = 6
     }
     
     @IBAction func add(_ sender: Any) {
